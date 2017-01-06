@@ -1,0 +1,385 @@
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+
+/********************************************************************************************************************/
+/******** MISC ******************************************************************************************************/
+/********************************************************************************************************************/
+
+*,
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+
+.clear {
+    clear: both;
+    padding: 0;
+    margin: 0; 
+}
+
+/* slightly enhanced, universal clearfix hack */
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+
+:focus {outline:none;}
+
+::-moz-focus-inner {border:0;}
+
+* { -webkit-tap-highlight-color: rgba(0,0,0,0); }
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+ul, ol, li {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;         
+}
+
+a:hover,
+a:active {
+    text-decoration: underline;
+}
+
+.transition {
+    -webkit-transition: all .1s ease-in;
+       -moz-transition: all .1s ease-in;
+        -ms-transition: all .1s ease-in;
+         -o-transition: all .1s ease-in;
+            transition: all .1s ease-in;
+}
+
+.radius {
+    -webkit-border-radius: 3px;  
+    -moz-border-radius: 3px;  
+    -o-border-radius: 3px;  
+    border-radius: 3px; 
+}
+
+.hidden { display: none !important; }
+
+img {image-rendering:optimizeQuality; -ms-interpolation-mode:bicubic;}
+
+img.scale-with-grid {
+    display: block;
+    height: auto !important;
+    width: 100% !important;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;    
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/***************************************************************************************************/
+/****** General Media Queries **********************************************************************/
+/***************************************************************************************************/
+
+/* Smartphones (portrait) ----------- */  
+/*@media only screen and (max-width : 320px) {  */
+@media only screen and (max-width : 320px) {  
+  /* Styles */ 
+
+        
+}  
+
+/* Smartphones (portrait) ----------- */  
+/*@media only screen and (max-width : 320px) {  */
+@media only screen and (min-width : 321px) and (max-width : 568px) {  
+  /* Styles */ 
+
+
+} 
+
+/*
+@media only screen and (max-device-width : 480px) {  
+    .grid-sizer,
+    #items .item {
+        width: 50% !important;
+    }
+}
+@media only screen and (min-device-width : 480px) and (max-device-width : 600px) {  
+    .grid-sizer,
+    #items .item {
+        width: 33% !important;
+    }
+}
+*/
+
+/* Smartphones (portrait and landscape) ----------- */  
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {  
+  /* Styles */  
+
+}  
+  
+/* Smartphones (landscape) ----------- */  
+@media only screen and (min-width : 321px) {  
+  /* Styles */    
+}  
+  
+/* Smartphones (portrait) ----------- */  
+/*@media only screen and (max-width : 320px) {  */
+@media only screen and (max-width : 480px) {  
+  /* Styles */ 
+}  
+  
+/* iPads (portrait and landscape) ----------- */  
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {  
+  /* Styles */  
+}  
+  
+/* iPads (landscape) ----------- */  
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {  
+  /* Styles */  
+}  
+  
+/* iPads (portrait) ----------- */  
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {  
+  /* Styles */  
+}  
+  
+/* Desktops and laptops ----------- */  
+@media only screen and (min-width : 1224px) {  
+  /* Styles */  
+}  
+  
+/* Large screens ----------- */  
+@media only screen and (min-width : 1824px) {  
+  /* Styles */  
+}  
+  
+/* iPhone 4 ----------- */  
+@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-device-pixel-ratio:1.5) {  
+  /* Styles */  
+}  
+
+@media screen and (max-width: 760px) {
+    body {
+        font-size:52% !important;
+    }
+
+}
+ 
+@media screen and (max-width: 320px) {
+    body {
+        font-size:42% !important;
+    }
+   
+}
+
+
+/********************************************************************************************************************/
+/******** FONTS  ****************************************************************************************************/
+/********************************************************************************************************************/
+
+
+@font-face {
+  font-family: 'GaramondPremrPro';
+  src: url('/web/20150830164052/http://www.gesaffelstein.com/assets/fonts/GaramondPremrPro.eot') format('embedded-opentype'),  url('/web/20150830164052/http://www.gesaffelstein.com/assets/fonts/GaramondPremrPro.otf')  format('opentype'),
+       url('/web/20150830164052/http://www.gesaffelstein.com/assets/fonts/GaramondPremrPro.woff') format('woff'), url('/web/20150830164052/http://www.gesaffelstein.com/assets/fonts/GaramondPremrPro.ttf')  format('truetype'), url('/web/20150830164052/http://www.gesaffelstein.com/assets/fonts/GaramondPremrPro.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/********************************************************************************************************************/
+/******** STRUCTURE *************************************************************************************************/
+/********************************************************************************************************************/
+
+body {
+    color: #fff;
+    background-color: #000;
+    
+    font-family: Helvetica,Arial,sans-serif;
+    font-weight:100;
+    font-size:62.5%;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+ /*background-image: url('../assets/img/1.jpg'); */
+  background: #000;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+
+h1 {font-size:2em}  /* displayed at 24px */
+h2 {font-size:1.5em}  /* displayed at 18px */
+h3 {font-size:1.25em}  /* displayed at 15px */
+h4 {font-size:1em}  /* displayed at 12px */
+input, select, th, td {font-size:1em;}
+
+body.fbiframe {
+    overflow: hidden;
+}
+
+body, html {
+    height: 100%;
+}
+
+.wrapper {
+    margin:auto;
+    text-align: center;
+    padding:0;
+    width:100%;
+    height: 100%;
+}
+
+.wrapper:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+}
+
+.countdown {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: default;
+  max-width: 95%;
+
+  position: relative;
+  text-align: center;
+  color: #fff;
+  font-family: 'GaramondPremrPro';
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.sep {
+  color: #fff;
+  font-size: 2em;
+  display: inline-block;
+}
+
+.one-clock {
+  color: #fff;
+  text-align: center;
+  padding: 0;
+  display: inline-block;
+  margin: 0;
+  /*height: 70px;*/
+  width: 40px;
+  /*border-radius: 100%;*/
+}
+
+.countdown-text {
+  font-size: 2.5em;
+  text-align: center;
+  font-weight: 400;
+  display: block;
+  line-height: 1.1em;
+}
+
+.text-clock {
+  font-size: 1.1em;
+  text-align: center;
+  font-weight: 400;
+  display: none;
+}
+
+
+.mseconds {
+  width: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
