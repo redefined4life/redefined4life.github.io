@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+
+<head>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- <meta name="viewport" content="width=810,user-scalable=yes"> -->
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
+
+		<title>REDEFINED4LIFE</title>
+		<meta name="description" content="REDEFINED4LIFE">
+
+		<!-- Facebook Open Graph --> 
+		<meta property="og:title" content="REDEFINED4LIFE">
+		<meta property="og:description" content="REDEFINED4LIFE">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="http://www.REDEFINED4LIFE.com/">
+		<link rel="shortcut icon" href="assets/img/favicon.png">
+
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/normalize.css" type="text/css">
+		<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+		
+
+	</head>
+
+
+
+	<div id="particles-js"></div>
+	<div class="wrapper">
+
+		<div class="countdown">
+			<span id="clock">
+				
+				<div class="one-clock day">
+					<span class="countdown-text">??</span>
+					<span class="text-clock">jours</span>
+				</div>
+
+				<div class="sep">.</div>
+
+				<div class="one-clock heures">
+					<span class="countdown-text">??</span>
+					<span class="text-clock">heures</span>
+				</div>
+
+				<div class="sep">.</div>
+
+				<div class="one-clock minutes">
+					<span class="countdown-text">??</span>
+					<span class="text-clock">minutes</span>
+				</div>
+
+				<div class="sep">.</div>
+
+				<div class="one-clock seconds">
+					<span class="countdown-text">??</span>
+					<span class="text-clock">secondes</span>
+				</div>				
+			
+				<div class="sep">.</div>
+
+				<div class="one-clock mseconds">
+					<span class="countdown-text">??</span>
+					<span class="text-clock">msecondes</span>
+				</div>	
+
+			</span>
+		</div>
+
+	</div>
+
+
+
+	 <!-- End .wrapper -->
+	<div id="jquery_jplayer_1" class="jp-jplayer" style="width: 0px; height: 0px;"><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_0" preload="metadata" src="assets/audio/audio.mp3"></audio></div>
+
+	<!-- here comes the javascript -->
+	<script src="js/particles.js"></script>
+	<script src="js/particles.min.js"></script>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/jquery.countdown.min.js"></script>
+	<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+	
+
+	
+	<script>	
+
+	$(document).ready(function () {
+
+	///web/20150910072525/http://stackoverflow.com/questions/10112563/create-countdown-timer-in-milliseconds
+
+	var end = new Date('10 Aug 2020 0:00:00');
+
+	var _second = 1000;
+	var _minute = _second * 60;
+	var _hour = _minute * 60;
+	var _day = _hour *24;
+	var timer;
+
+	function showRemaining()
+	{
+	    var now = new Date();
+	    var distance = end - now;
+	    if (distance < 0 ) {
+	       // handle expiry here..
+	       clearInterval( timer ); // stop the timer from continuing ..
+	       //alert('Expired'); // alert a message that the timer has expired..
+	    }
+	    var days = Math.floor(distance / _day);
+	    var hours = Math.floor( (distance % _day ) / _hour );
+	    var minutes = Math.floor( (distance % _hour) / _minute );
+	    var seconds = Math.floor( (distance % _minute) / _second );
+	    var milliseconds = distance % _second;
+
+		if(days>0) days = "??";
+		if(hours>0) hours = "??";
+		if(minutes>0) minutes = "??";
+		if(seconds>0) seconds = "??";
+		if(milliseconds<10) 		milliseconds = "??"+milliseconds;
+		else if(milliseconds<100) 	milliseconds = "0"+milliseconds;
+
+
+		$('.day .countdown-text').text(days);		
+		$('.heures .countdown-text').text(hours);		
+		$('.minutes .countdown-text').text(minutes);	
+		$('.seconds .countdown-text').text(seconds);		
+		$('.mseconds .countdown-text').text(milliseconds);	
+
+
+	}
+
+	timer = setInterval(showRemaining, 10);
+
+	function playPlayer() { 
+
+		$("#jquery_jplayer_1").jPlayer({
+			ready: function (event) {
+				$(this).jPlayer("setMedia", {
+					mp3:"assets/audio/audiio.mp3"
+				}).jPlayer("play");
+			},
+			ended: function (event) {
+				// $(this).jPlayer("play");
+			},			
+			swfPath: "assets/js/",
+			supplied: "mp3",
+			volume: 0.6,
+			wmode: "opaque"
+		});
+
+		// $("#jplayer_inspector").jPlayerInspector({jPlayer:$("#jquery_jplayer_1")});
+
+	};
+
+	playPlayer();
+
+	}); // End $(document).ready   			
+
+
+	</script>	
+
+
+
+<script type="text/javascript">
+	particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 80,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 1,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+var count_particles, stats, update;
+stats = new Stats;
+stats.setMode(0);
+stats.domElement.style.position = 'absolute';
+stats.domElement.style.left = '0px';
+stats.domElement.style.top = '0px';
+document.body.appendChild(stats.domElement);
+count_particles = document.querySelector('.js-count-particles');
+update = function() {
+  stats.begin();
+  stats.end();
+  if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+    count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+  }
+  requestAnimationFrame(update);
+};
+requestAnimationFrame(update);;
+</script>
+
+
+
+
+
+</body></html>
